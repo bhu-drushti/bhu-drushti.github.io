@@ -1,2 +1,2 @@
-# Bhu-Drushti-artifacts
-various submission artifacts for bhu-drushti 
+# Bhu-Drushti-webpage
+Web page for Project Bhu-Drushti
