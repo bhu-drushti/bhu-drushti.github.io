@@ -742,6 +742,12 @@ li { margin-bottom: 0.35rem; }
   opacity: 0.7;
 }
 
+.footer-sub a {
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-sub a:hover { color: #a8dbb4; text-decoration: none; }
+
 .footer-links {
   display: flex;
   flex-wrap: wrap;
