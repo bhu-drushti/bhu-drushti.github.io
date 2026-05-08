@@ -459,6 +459,173 @@ li { margin-bottom: 0.35rem; }
 }
 
 /* =============================================
+   HOW IT WORKS — 3-COLUMN LAYOUT
+   ============================================= */
+.how-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 860px) {
+  .how-grid { flex-direction: row; align-items: flex-start; gap: 0.25rem; }
+}
+
+.how-col {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.how-arrow {
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  color: var(--gold);
+  align-self: center;
+  text-align: center;
+  padding: 0.5rem;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 860px) {
+  .how-arrow { transform: rotate(0deg); padding-top: 3rem; }
+}
+
+.how-col-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.how-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.how-title-mr {
+  display: block;
+  font-family: var(--font-deva);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.2;
+}
+
+.how-title-en {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.how-subtitle {
+  font-family: var(--font-deva);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.7;
+}
+
+.how-subtitle em {
+  font-family: var(--font);
+  font-size: 0.82rem;
+}
+
+.how-items {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.how-items li { margin: 0; }
+
+.how-item-mr {
+  display: block;
+  font-family: var(--font-deva);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.how-item-en {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Risk bar */
+.risk-bar-wrap { margin-bottom: 1.25rem; }
+
+.risk-bar-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.risk-bar {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #c0392b, #e67e22, #27ae60);
+  margin-bottom: 0.3rem;
+}
+
+.risk-bar-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.67rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+/* Signal list */
+.signal-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.signal-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+
+.signal-list li:last-child { border-bottom: none; }
+
+.signal-pct {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+/* =============================================
    CAPABILITIES GRID
    ============================================= */
 .cap-grid {
