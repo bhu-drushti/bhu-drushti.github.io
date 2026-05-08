@@ -72,6 +72,7 @@ li { margin-bottom: 0.35rem; }
   font-weight: 700;
   color: var(--green-dark);
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .section-lead {
