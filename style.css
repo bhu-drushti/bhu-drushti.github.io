@@ -698,6 +698,13 @@ li { margin-bottom: 0.35rem; }
   margin-top: 0.2rem;
 }
 
+.team-email {
+  font-size: 0.78rem;
+  color: var(--green-mid);
+  margin-top: 0.4rem;
+  word-break: break-all;
+}
+
 .team-advisors {
   font-size: 0.9rem;
   color: var(--text-muted);
