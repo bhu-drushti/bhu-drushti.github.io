@@ -663,6 +663,7 @@ li { margin-bottom: 0.35rem; }
   flex-wrap: wrap;
   gap: var(--gap);
   margin-bottom: 1.5rem;
+  justify-content: center;
 }
 
 .team-card {
