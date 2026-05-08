@@ -79,7 +79,8 @@ li { margin-bottom: 0.35rem; }
   font-size: clamp(1rem, 2.5vw, 1.12rem);
   color: var(--text-muted);
   max-width: 720px;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
 
 .section-note {
@@ -89,6 +90,9 @@ li { margin-bottom: 0.35rem; }
   font-style: italic;
   border-left: 3px solid var(--green-mid);
   padding-left: 0.85rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =============================================
