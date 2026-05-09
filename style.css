@@ -934,3 +934,9 @@ li { margin-bottom: 0.35rem; }
   * { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Marathi page — Devanagari body font */
+[lang="mr"] body {
+  font-family: var(--font-deva);
+  line-height: 1.8;
+}

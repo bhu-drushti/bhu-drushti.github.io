@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="भू-दृष्टी — महाराष्ट्रासाठी उपग्रह-जमीन समन्वय आणि पीक क्षेत्र सत्यापन प्रणाली. Pune Agri Hackathon 2026." />
+  <title>भू-दृष्टी · Bhu-Drushti</title>
+  <link rel="stylesheet" href="../style.css?v=3" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">भू-दृष्टी</span>
+    <div class="nav-links">
+      <a href="#problem">समस्या</a>
+      <a href="#demo">डेमो</a>
+      <a href="#how">कसे काम करते</a>
+      <a href="#mvp">MVP</a>
+      <a href="#team">संघ</a>
+      <a href="/" class="btn btn-sm" style="background:var(--gold);color:#fff;">EN</a>
+      <a href="https://github.com/bhu-drushti/bhu-drushti.github.io" target="_blank" rel="noopener" class="btn btn-sm">GitHub ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-event">Pune Agri Hackathon 2026 &nbsp;·&nbsp; थीम ८ · भू-स्थानिक आणि GIS-आधारित पीक सर्वेक्षण</p>
+      <h1 class="hero-title">
+        <span class="hero-deva">भू-दृष्टी</span>
+        <span class="hero-en">Bhu-Drushti</span>
+      </h1>
+      <p class="hero-sub">महाराष्ट्रासाठी उपग्रह-जमीन समन्वय आणि पीक क्षेत्र सत्यापन प्रणाली</p>
+      <p class="hero-tagline">"उपग्रह पाहतो, प्रणाली सुचवते, अधिकारी निर्णय घेतो"</p>
+      <div class="hero-ctas">
+        <a href="https://github.com/bhu-drushti/bhu-drushti.github.io" target="_blank" rel="noopener" class="btn btn-primary">GitHub वर पहा ↗</a>
+        <a href="https://github.com/bhu-drushti/bhu-drushti.github.io/blob/main/BhuDrushti_Proposal.pdf" target="_blank" rel="noopener" class="btn btn-outline">प्रस्ताव PDF वाचा ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-num">2.3 Cr</span>
+        <span class="stat-label">दरहंगामी सत्यापित करावयाचे शेत भूखंड</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">5 Cr+</span>
+        <span class="stat-label">अचूकतेवर अवलंबून असलेल्या शेतकरी कुटुंबे</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">80%+</span>
+        <span class="stat-label">कृषी सहायक क्षेत्र वेळ पुनर्प्राप्त</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">₹ 0</span>
+        <span class="stat-label">उपग्रह प्रतिमा खर्च (ESA Sentinel-2)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="problem">
+    <div class="container">
+      <h2 class="section-title">समस्या</h2>
+      <p class="section-lead">
+        महाराष्ट्राची <strong>गिरदावारी</strong> — २.३ कोटी भूखंडांवरील हंगामी पीक सर्वेक्षण — हे अनुदान वितरण, PMFBY विमा,
+        आपत्ती भरपाई आणि किसान क्रेडिट कार्ड कर्जाचा कायदेशीर आधार आहे.
+        प्रत्येक चूक किंवा फसवणूक सर्व पुढील निर्णयांवर परिणाम करते. तरीही हे पूर्णपणे हाताने केले जाते.
+      </p>
+      <div class="compare-grid">
+        <div class="compare-card compare-before">
+          <p class="compare-label">भू-दृष्टीशिवाय</p>
+          <p class="compare-role">बारामती तालुक्यातील एक कृषी सहायक — खरीपानंतर, ऑक्टोबर</p>
+          <ul>
+            <li>तिच्या सर्कलमधील ३,२०० भूखंडांना प्रत्यक्ष सत्यापन आवश्यक आहे</li>
+            <li>८ कृषी सहायक, प्रति भूखंड १५ मिनिटे = १००+ कामाचे दिवस</li>
+            <li>कोणत्या भूखंडांना खरोखर भेट आवश्यक आहे हे जाणण्याचा मार्ग नाही</li>
+            <li>प्रत्येक भूखंड समान प्राधान्य म्हणून हाताळला जातो</li>
+          </ul>
+          <p class="compare-result bad">परिणाम: हंगामी कालावधीत सत्यापन पूर्ण करणे शारीरिकदृष्ट्या अशक्य.</p>
+        </div>
+        <div class="compare-card compare-after">
+          <p class="compare-label">भू-दृष्टीसह</p>
+          <p class="compare-role">तेच कृषी सहायक, तोच ऑक्टोबरचा सकाळ</p>
+          <ul>
+            <li>उपग्रहाने रात्रभरात सर्व ३,२०० भूखंडांचे पूर्व-मूल्यांकन केले आहे</li>
+            <li>ती ४ चिन्हांकित भूखंडांची प्राधान्य रांग उघडते</li>
+            <li>भू-टॅग केलेल्या फोटो पुराव्यासह क्षेत्र भेटी पुष्टी</li>
+            <li>उर्वरित ३,१९६ उपग्रह ऑडिट ट्रेलसह स्वयं-पुष्टी</li>
+          </ul>
+          <p class="compare-result good">संपूर्ण सर्कल कालावधीत सत्यापित. ती आता अडथळा राहिली नाही.</p>
+        </div>
+      </div>
+      <p class="section-note">ESA Sentinel-2 चा उपग्रह पीक डेटा (मोफत, १० मीटर रिझोल्यूशन, दर ५ दिवसांनी) महाराष्ट्रातील प्रत्येक भूखंड आधीच व्यापतो. भू-दृष्टी ही गहाळ समन्वय स्तर आहे.</p>
+    </div>
+  </section>
+
+  <!-- DEMO VIDEO -->
+  <section class="section section-alt" id="demo">
+    <div class="container">
+      <h2 class="section-title">डेमो</h2>
+      <div class="video-placeholder">
+        <p>🎬 डेमो व्हिडिओ लवकरच येत आहे.</p>
+        <p class="video-sub">दरम्यान, स्रोत कोड एक्सप्लोर करा किंवा खाली पूर्ण प्रस्ताव वाचा.</p>
+        <div class="hero-ctas" style="margin-top:1.5rem;">
+          <a href="https://github.com/bhu-drushti/bhu-drushti.github.io" target="_blank" rel="noopener" class="btn btn-primary">GitHub वर स्रोत पहा ↗</a>
+          <a href="https://github.com/bhu-drushti/bhu-drushti.github.io/blob/main/BhuDrushti_Proposal.pdf" target="_blank" rel="noopener" class="btn btn-outline">पूर्ण प्रस्ताव वाचा ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUR CAPABILITIES -->
+  <section class="section" id="capabilities">
+    <div class="container">
+      <h2 class="section-title">चार एकत्रित क्षमता</h2>
+      <p class="section-lead">यापैकी कोणतीही आज गिरदावारी कार्यप्रवाहात अस्तित्वात नाही.</p>
+      <div class="cap-grid">
+        <div class="cap-card">
+          <div class="cap-icon">🛰️</div>
+          <h3>उपग्रह पाइपलाइन</h3>
+          <p>GEE Python API Sentinel-2 प्रतिमा भूखंड सीमांपर्यंत क्लिप करते. तोच कोड १० प्रोटोटाइप भूखंड किंवा महाराष्ट्राचे सर्व २.३ कोटी भूखंड बदलाशिवाय प्रक्रिया करतो. ढग आच्छादन &gt; ४०%: अनिवार्य कृषी सहायक भेटीसाठी स्वयं-चिन्हांकित.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">⚖️</div>
+          <h3>जोखीम मूल्यांकन इंजिन</h3>
+          <p>NDVI श्रेणी जुळवणी (टप्पा १), पिक्सेल-काउंट क्षेत्र तपासणी (टप्पा २), आणि DTW टाइम-सिरीज वर्गीकरण (भारतीय खरीप पिकांसाठी &gt;८४% अचूकता). Node.js + PostGIS on Docker.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">📱</div>
+          <h3>कृषी सहायक मोबाइल अॅप</h3>
+          <p>React Native with expo-sqlite — शून्य इंटरनेटसह पूर्ण क्षेत्र दिवस. पूर्व-लोड केलेल्या कॅडस्ट्रल डेटावर turf.js द्वारे भूखंड बहुभुज. बजेट Android फोनवर काम करते.</p>
+        </div>
+        <div class="cap-card">
+          <div class="cap-icon">🗺️</div>
+          <h3>जिल्हा डॅशबोर्ड</h3>
+          <p>कोणत्याही आधुनिक ब्राउझरवर Progressive Web App — इन्स्टॉल नाही. PostGIS ओव्हरलेसह Leaflet.js इंटरेक्टिव्ह नकाशा. अधिकारी कक्षेनुसार भूमिका-नियंत्रित प्रवेश. आपत्ती नुकसानासाठी NDVI बदल शोध.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" id="how">
+    <div class="container">
+      <h2 class="section-title">हे कसे काम करते</h2>
+      <p class="section-lead">चार डेटा स्रोत एक जोखीम गुण पुरवतात. गुण सुचवतो. अधिकारी निर्णय घेतो.</p>
+      <div class="how-grid">
+
+        <!-- 01 निविष्ठा -->
+        <div class="how-col">
+          <div class="how-col-header">
+            <span class="how-num">०१</span>
+            <div>
+              <span class="how-title-mr">निविष्ठा</span>
+              <span class="how-title-en">INPUTS</span>
+            </div>
+          </div>
+          <p class="how-subtitle">चार स्वतंत्र साक्षीदार</p>
+          <ul class="how-items">
+            <li><span class="how-item-en">शेतकऱ्याची घोषित पीक</span></li>
+            <li><span class="how-item-en">उपग्रह छायाचित्र, दर ५ दिवसांनी</span></li>
+            <li><span class="how-item-en">अधिकाऱ्याचा भू-टॅग फोटो</span></li>
+            <li><span class="how-item-en">भूमापन भूखंड डेटा</span></li>
+          </ul>
+        </div>
+
+        <div class="how-arrow">→</div>
+
+        <!-- 02 प्रणाली -->
+        <div class="how-col">
+          <div class="how-col-header">
+            <span class="how-num">०२</span>
+            <div>
+              <span class="how-title-mr">प्रणाली</span>
+              <span class="how-title-en">THE BRAIN</span>
+            </div>
+          </div>
+          <p class="how-subtitle">तीन सिग्नल, एक सूचना</p>
+          <div class="risk-bar-wrap">
+            <div class="risk-bar-label">जोखीम गुण · RISK SCORE</div>
+            <div class="risk-bar"></div>
+            <div class="risk-bar-ticks">
+              <span>तपास</span>
+              <span>हस्तचालित आढावा</span>
+              <span>स्वयं-पुष्टी</span>
+            </div>
+          </div>
+          <ul class="signal-list">
+            <li>
+              <span class="how-item-en">पीक ओळख जुळवणी</span>
+              <span class="signal-pct">30%</span>
+            </li>
+            <li>
+              <span class="how-item-en">क्षेत्रफळ तपासणी</span>
+              <span class="signal-pct">40%</span>
+            </li>
+            <li>
+              <span class="how-item-en">GPS फोटो तपासणी</span>
+              <span class="signal-pct">30%</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="how-arrow">→</div>
+
+        <!-- 03 परिणाम -->
+        <div class="how-col">
+          <div class="how-col-header">
+            <span class="how-num">०३</span>
+            <div>
+              <span class="how-title-mr">परिणाम</span>
+              <span class="how-title-en">OUTPUTS</span>
+            </div>
+          </div>
+          <p class="how-subtitle">पुढे कोण काय करतो</p>
+          <ul class="how-items">
+            <li><span class="how-item-en">वरिष्ठ अधिकारी, संपूर्ण जिल्हा</span></li>
+            <li><span class="how-item-en">क्षेत्र अधिकारी अॅप · ऑफलाइन</span></li>
+            <li><span class="how-item-en">लेखा अहवाल, डाउनलोड करण्यायोग्य</span></li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="section-note human-loop">प्रत्येक निकालासाठी मानव अधिकारी स्वाक्षरी आवश्यक आहे — उपग्रह बुद्धिमत्ता मार्गदर्शन करते, अधिकारी निर्णय घेतात.</p>
+    </div>
+  </section>
+
+  <!-- MVP -->
+  <section class="section section-alt" id="mvp">
+    <div class="container">
+      <h2 class="section-title">MVP स्थिती</h2>
+      <p class="section-lead">कार्यरत प्रोटोटाइप — <strong>मालेगाव खुर्द गाव, बारामती तालुका, खरीप २०२४</strong> च्या वास्तविक Sentinel-2 डेटा वापरून थेट डेमो.</p>
+      <div class="mvp-grid">
+        <div class="mvp-item done">
+          <span class="mvp-check">✓</span>
+          <div>
+            <strong>उपग्रह पाइपलाइन — प्रमाणित</strong>
+            <p>GEE Python पाइपलाइन सक्रिय. सर्व १० भूखंडांनी NDVI ०.६४–०.७९ परत केले, निरोगी खरीप वनस्पतीशी सुसंगत. Mahabhunaksha कॅडस्ट्रल डेटावरून भूखंड सीमा डिजिटाइझ केल्या.</p>
+          </div>
+        </div>
+        <div class="mvp-item done">
+          <span class="mvp-check">✓</span>
+          <div>
+            <strong>जोखीम मूल्यांकन — सिग्नल १ कार्यरत</strong>
+            <p>NDVI श्रेणी जुळवणी ०–१०० गुण तयार करते. डेमो आउटपुट: ६ स्वयं-पुष्टी, ३ चिन्हांकित, १ वाढवलेले. DTW टाइम-सिरीज वर्गीकरण टप्पा २ साठी नियोजित.</p>
+          </div>
+        </div>
+        <div class="mvp-item done">
+          <span class="mvp-check">✓</span>
+          <div>
+            <strong>कृषी सहायक मोबाइल अॅप — मोड B (सत्यापन रांग)</strong>
+            <p>४ भूखंडांची जोखीम-क्रमवारी रांग, ऑफलाइन-प्रथम SQLite, GPS अचूकता गेट ≤ १५ मीटर, निकालापूर्वी अनिवार्य भू-टॅग केलेला फोटो. हॅकाथॉन ठिकाणी डेमो मोड.</p>
+          </div>
+        </div>
+        <div class="mvp-item done">
+          <span class="mvp-check">✓</span>
+          <div>
+            <strong>जिल्हा डॅशबोर्ड — मूलभूत</strong>
+            <p>उपग्रह पीक वर्गीकरणानुसार रंगीत भूखंड बहुभुजांसह Leaflet नकाशा. जोखीम सारांश पॅनेल. अनुकरणीय पूर्व/नंतर घटना डेटासह NDVI आपत्ती बदल शोध प्रदर्शित.</p>
+          </div>
+        </div>
+        <div class="mvp-item done">
+          <span class="mvp-check">✓</span>
+          <div>
+            <strong>बॅकएंड — स्वयंपूर्ण</strong>
+            <p>Node.js (Express) + PostGIS on Docker. तीन REST endpoints: भूखंड रांग, निकाल अपलोड, NDVI डेल्टा हीटमॅप. टप्पा १ मध्ये शून्य सरकारी API अवलंबित्व.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="roadmap-title">रोडमॅप</h3>
+      <div class="roadmap">
+        <div class="roadmap-phase active">
+          <span class="phase-label">टप्पा १ · आत्ता</span>
+          <strong>MVP</strong>
+          <p>१० भूखंड, मालेगाव खुर्द. वास्तविक डेटासह सिग्नल १ जोखीम मूल्यांकन. स्वयंपूर्ण — कोणत्याही सरकारी API ची आवश्यकता नाही.</p>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-phase">
+          <span class="phase-label">टप्पा २ · ३–९ महिने</span>
+          <strong>तालुका पायलट</strong>
+          <p>पूर्ण तालुका, DILRMP कॅडस्ट्रल MoU, सिग्नल २ &amp; ३, मोड A पेरणी कॅप्चर.</p>
+        </div>
+        <div class="roadmap-arrow">→</div>
+        <div class="roadmap-phase">
+          <span class="phase-label">टप्पा ३ · ९–२४ महिने</span>
+          <strong>संपूर्ण महाराष्ट्र</strong>
+          <p>सर्व ३६ जिल्हे, ३५८ तालुके, २.३ कोटी भूखंड, दोन्ही हंगाम. AgriStack API एकत्रीकरण.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECONOMICS -->
+  <section class="section section-alt" id="economics">
+    <div class="container">
+      <h2 class="section-title">अर्थशास्त्र का काम करते</h2>
+      <div class="econ-grid">
+        <div class="econ-item">
+          <span class="econ-num">₹ 0</span>
+          <span class="econ-label">उपग्रह प्रतिमा खर्च — ESA Sentinel-2 मोफत आहे</span>
+        </div>
+        <div class="econ-item">
+          <span class="econ-num">~₹ 0</span>
+          <span class="econ-label">नवीन तालुकाप्रति किरकोळ खर्च — तीच पाइपलाइन, नवीन विकास नाही</span>
+        </div>
+        <div class="econ-item">
+          <span class="econ-num">~₹1,800/mo</span>
+          <span class="econ-label">टप्पा २ संपूर्ण तालुका पायलट (GCP Cloud SQL + Cloud Run)</span>
+        </div>
+        <div class="econ-item">
+          <span class="econ-num">₹500 Cr</span>
+          <span class="econ-label">दूरसंवेदन आणि AI पीक सर्वेक्षणासाठी MahaAgri-AI धोरण २०२५–२०२९ वाटप — निधी प्राप्त, अद्याप तैनात नाही</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="container">
+      <h2 class="section-title">संघ कृषिनोव्हेटर्स</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">AH</div>
+          <a href="https://www.linkedin.com/in/aditi-h-a9a84b2ab/" target="_blank" rel="noopener"><strong>Aditi Hatwalne</strong></a>
+          <span class="team-role">फुल-स्टॅक डेव्हलपर</span>
+          <a class="team-email" href="mailto:aditi.hatwalne@gmail.com">aditi.hatwalne@gmail.com</a>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">YG</div>
+          <a href="https://www.linkedin.com/in/yaminigirey/" target="_blank" rel="noopener"><strong>Yamini Girey</strong></a>
+          <span class="team-role">उत्पादन आणि डोमेन संशोधन</span>
+          <a class="team-email" href="mailto:yamini.girey@gmail.com">yamini.girey@gmail.com</a>
+        </div>
+      </div>
+      <p class="team-advisors">तंत्रज्ञान सल्लागार: <strong>Anand Hatwalne</strong> &nbsp;·&nbsp; <strong>Anand Sathe</strong></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-name">भू-दृष्टी · Bhu-Drushti</p>
+      <p class="footer-sub"><a href="https://www.puneagrihackathon.com/" target="_blank" rel="noopener">Pune Agri Hackathon 2026</a> &nbsp;·&nbsp; थीम ८ &nbsp;·&nbsp; संघ कृषिनोव्हेटर्स</p>
+      <div class="footer-links">
+        <a href="https://github.com/bhu-drushti/bhu-drushti.github.io" target="_blank" rel="noopener">GitHub रिपॉझिटरी ↗</a>
+        <a href="https://github.com/bhu-drushti/bhu-drushti.github.io/blob/main/BhuDrushti_Proposal.pdf" target="_blank" rel="noopener">प्रस्ताव PDF ↗</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
