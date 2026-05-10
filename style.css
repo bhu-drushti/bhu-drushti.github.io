@@ -170,6 +170,8 @@ li { margin-bottom: 0.35rem; }
 }
 
 .nav-links a:hover { color: var(--green-dark); text-decoration: none; }
+.nav-links .btn-sm { color: var(--white); }
+.nav-links .btn-sm:hover { color: var(--white); }
 
 /* Hide nav text links on very small screens, keep GitHub button */
 @media (max-width: 480px) {
