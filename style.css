@@ -122,6 +122,11 @@ li { margin-bottom: 0.35rem; }
   background: transparent;
 }
 
+.hero .btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+
 .btn-sm {
   padding: 0.4rem 0.9rem;
   font-size: 0.85rem;
