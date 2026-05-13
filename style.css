@@ -942,7 +942,9 @@ li { margin-bottom: 0.35rem; }
   html { scroll-behavior: auto; }
 }
 
-/* Marathi page — Devanagari body font */
+#problem .section-lead {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
 [lang="mr"] body {
   font-family: var(--font-deva);
   line-height: 1.8;
