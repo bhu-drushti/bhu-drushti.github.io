@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bhu-Drushti — Satellite-Ground Reconciliation &amp; Crop Field Verification System for Maharashtra. Pune Agri Hackathon 2026." />
+  <meta name="description" content="Bhu-Drushti, Satellite-Ground Reconciliation &amp; Crop Field Verification System for Maharashtra. Pune Agri Hackathon 2026." />
   <title>भू-दृष्टी · Bhu-Drushti</title>
   <link rel="stylesheet" href="style.css?v=3" />
 </head>
@@ -64,7 +64,7 @@
     <div class="container">
       <h2 class="section-title">The Problem</h2>
       <p class="section-lead">
-        Around 55–60% of Maharashtra's geography consists of farmland — roughly 30 million football fields.
+        Around 55–60% of Maharashtra's geography consists of farmland, roughly 30 million football fields.
         Surveying this land is often a manual and time-consuming process. Today, the responsibility of verifying
         what's growing on those fields is on the farmers who need to self-declare what they are growing.
         This still doesn't offer statewide coverage.
@@ -76,7 +76,7 @@
       <div class="compare-grid">
         <div class="compare-card compare-before">
           <p class="compare-label">Without Bhu-Drushti</p>
-          <p class="compare-role">A Krishi Sahayak in Baramati taluka — post-Kharif, October</p>
+          <p class="compare-role">A Krishi Sahayak in Baramati taluka, post-Kharif, October</p>
           <ul>
             <li>3,200 plots across her Circle need physical verification</li>
             <li>8 Krishi Sahayaks, 15 min per plot = 100+ working days</li>
@@ -133,12 +133,12 @@
         <div class="cap-card">
           <div class="cap-icon">📱</div>
           <h3>Krishi Sahayak Mobile App</h3>
-          <p>Offline first — full field day with zero internet. Works on budget Android phones. React Native with expo-sqlite.</p>
+          <p>Offline first, full field day with zero internet. Works on budget Android phones. React Native with expo-sqlite.</p>
         </div>
         <div class="cap-card">
           <div class="cap-icon">🗺️</div>
           <h3>District Dashboard</h3>
-          <p>Progressive Web App on any modern browser — no install. Role-based access per officer scope. Module based activation for different features.</p>
+          <p>Progressive Web App on any modern browser, no install. Role-based access per officer scope. Module based activation for different features.</p>
         </div>
       </div>
     </div>
@@ -148,40 +148,40 @@
   <section class="section section-alt" id="mvp">
     <div class="container">
       <h2 class="section-title">MVP Status</h2>
-      <p class="section-lead">Working prototype — live demo using real Sentinel-2 data, <strong>Malegaon Khurd village, Baramati taluka, Kharif 2024</strong>.</p>
+      <p class="section-lead">Working prototype, live demo using real Sentinel-2 data, <strong>Malegaon Khurd village, Baramati taluka, Kharif 2024</strong>.</p>
       <div class="mvp-grid">
         <div class="mvp-item done">
           <span class="mvp-check">✓</span>
           <div>
-            <strong>Satellite Pipeline — Validated</strong>
+            <strong>Satellite Pipeline, Validated</strong>
             <p>GEE Python pipeline live. All 10 plots returned NDVI 0.64–0.79, consistent with healthy Kharif vegetation. Plot boundaries digitised from Mahabhunaksha cadastral data.</p>
           </div>
         </div>
         <div class="mvp-item done">
           <span class="mvp-check">✓</span>
           <div>
-            <strong>Risk Scoring — Signal 1 Operational</strong>
+            <strong>Risk Scoring, Signal 1 Operational</strong>
             <p>NDVI range matching produces 0–100 scores. Demo output: 6 auto-confirmed, 3 flagged, 1 escalated. DTW time-series classification staged for Phase 2.</p>
           </div>
         </div>
         <div class="mvp-item done">
           <span class="mvp-check">✓</span>
           <div>
-            <strong>Krishi Sahayak Mobile App — Mode B (Verification Queue)</strong>
+            <strong>Krishi Sahayak Mobile App, Mode B (Verification Queue)</strong>
             <p>Risk-sorted queue of 4 plots, offline-first SQLite, GPS accuracy gate ≤ 15m, mandatory geo-tagged photo before verdict. Demo Mode at hackathon venue.</p>
           </div>
         </div>
         <div class="mvp-item done">
           <span class="mvp-check">✓</span>
           <div>
-            <strong>District Dashboard — Basic</strong>
+            <strong>District Dashboard, Basic</strong>
             <p>Leaflet map with plot polygons coloured by satellite crop classification. Risk summary panel. NDVI disaster change detection demonstrated with simulated pre/post event data.</p>
           </div>
         </div>
         <div class="mvp-item done">
           <span class="mvp-check">✓</span>
           <div>
-            <strong>Backend — Self-Contained</strong>
+            <strong>Backend, Self-Contained</strong>
             <p>Node.js (Express) + PostGIS on Docker. Three REST endpoints: plot queue, verdict upload, NDVI delta heatmap. Zero government API dependency in Phase 1.</p>
           </div>
         </div>
@@ -192,7 +192,7 @@
         <div class="roadmap-phase active">
           <span class="phase-label">Phase 1 · Now</span>
           <strong>MVP</strong>
-          <p>10 plots, Malegaon Khurd. Signal 1 risk scoring with real data. Self-contained — no govt. API needed.</p>
+          <p>10 plots, Malegaon Khurd. Signal 1 risk scoring with real data. Self-contained, no govt. API needed.</p>
         </div>
         <div class="roadmap-arrow">→</div>
         <div class="roadmap-phase">
@@ -217,11 +217,11 @@
       <div class="econ-grid">
         <div class="econ-item">
           <span class="econ-num">₹ 0</span>
-          <span class="econ-label">Satellite imagery cost — ESA Sentinel-2 is free</span>
+          <span class="econ-label">Satellite imagery cost, ESA Sentinel-2 is free</span>
         </div>
         <div class="econ-item">
           <span class="econ-num">~₹ 0</span>
-          <span class="econ-label">Marginal cost per new taluka — same pipeline, no new dev</span>
+          <span class="econ-label">Marginal cost per new taluka, same pipeline, no new dev</span>
         </div>
         <div class="econ-item">
           <span class="econ-num">~₹1,800/mo</span>
@@ -229,7 +229,7 @@
         </div>
         <div class="econ-item">
           <span class="econ-num">₹500 Cr</span>
-          <span class="econ-label">MahaAgri-AI Policy 2025–2029 allocation for remote sensing &amp; AI crop survey — funded, not yet deployed</span>
+          <span class="econ-label">MahaAgri-AI Policy 2025–2029 allocation for remote sensing &amp; AI crop survey, funded, not yet deployed</span>
         </div>
       </div>
     </div>
